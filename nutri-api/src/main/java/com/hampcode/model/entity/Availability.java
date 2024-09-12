@@ -8,24 +8,25 @@ import java.time.LocalTime;
 
 @Data
 @Entity
-@Table(name="availabilities",
-        uniqueConstraints = {@UniqueConstraint(columnNames = {"time", "date", "id_doctor"})})
+@Table(name = "availability")
 public class Availability {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name="time", nullable = false)
-    private LocalTime time;
+    @Column(name="reserved", nullable = false)
+    private Boolean reserved;
 
     @Column(name="date", nullable = false)
     private LocalDate date;
 
-    @Column(name="reserved", nullable = false)
-    private boolean reserved;
+    @Column(name= "time" , nullable= false)
+    private LocalTime time;
 
-    @ManyToOne
+    @OnetoOne
     @JoinColumn(name = "id_doctor", referencedColumnName = "id"
-            ,foreignKey = @ForeignKey(name = "FK_doctors_users"))
+            ,foreignKey = @ForeignKey(name = "FK_id_doctor"))
     private Doctor doctor;
+
 }
+
