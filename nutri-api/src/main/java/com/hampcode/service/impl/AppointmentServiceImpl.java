@@ -39,8 +39,7 @@ public class AppointmentServiceImpl implements AppointmentService {
     public Appointment update(Integer id, Appointment appointment) {
         Appointment doc = appointmentRepository.findById(id).
                 orElseThrow(() -> new RuntimeException("Appointment not found with id: " + id));
-        doc.setFirst_name(appointment.getFirst_name());
-        doc.setLast_name(appointment.getLast_name());
+        doc.setId_availability(appointment.getId_availability());
         return appointmentRepository.save(doc);
     }
 

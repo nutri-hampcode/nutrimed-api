@@ -57,6 +57,13 @@ public class UserServiceImpl implements UserService {
 
     @Transactional
     @Override
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username)
+                .orElseThrow(() -> new RuntimeException("User not found with username: " + username));
+    }
+
+    @Transactional
+    @Override
     public void delete(Integer id) {
         userRepository.deleteById(id);
     }
