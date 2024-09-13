@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     public List<User> findAll() {
         return userRepository.findAll();
     }
-    /*
+
     @Transactional(readOnly = true)
     @Override
     public User getOne(Integer id) {
@@ -30,8 +30,6 @@ public class UserServiceImpl implements UserService {
     @Transactional
     @Override
     public User create(User user) {
-
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
 
@@ -42,9 +40,7 @@ public class UserServiceImpl implements UserService {
                 orElseThrow(() -> new RuntimeException("User not found with id: " + id));
         us.setName(user.getName());
         us.setUsername(user.getUsername());
-        if (user.getPassword() != null && !user.getPassword().isEmpty()) {
-            us.setPassword(passwordEncoder.encode(user.getPassword()));
-        }
+        us.setPassword(user.getPassword());
         us.setEmail(user.getEmail());
         us.setHeight(user.getHeight());
         us.setWeight(user.getWeight());
@@ -70,7 +66,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean checkCredentials(String username, String password) {
-        User user = userRepository.findByUsername(username);
-        return passwordEncoder.matches(password, user.getPassword());
-    }*/
+        User user = findByUsername(username);
+        return user.getPassword().equals(password);
+    }
 }
