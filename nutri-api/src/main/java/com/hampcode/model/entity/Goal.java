@@ -1,4 +1,4 @@
-package com.ayrtonto.nutriapi.model.entity;
+package com.hampcode.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.hampcode.controller;
+package com.hampcode.api;
 
 import com.hampcode.model.entity.Meal;
 import com.hampcode.service.MealService;

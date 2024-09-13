@@ -1,7 +1,7 @@
-package com.hampcode.model.service;
+package com.hampcode.service;
 
 import com.hampcode.model.entity.Meal;
-import com.hampcode.model.repository.MealRepository;
+import com.hampcode.repository.MealRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     public List<User> findAll() {
         return userRepository.findAll();
     }
-
+    /*
     @Transactional(readOnly = true)
     @Override
     public User getOne(Integer id) {
@@ -72,5 +72,5 @@ public class UserServiceImpl implements UserService {
     public boolean checkCredentials(String username, String password) {
         User user = userRepository.findByUsername(username);
         return passwordEncoder.matches(password, user.getPassword());
-    }
+    }*/
 }

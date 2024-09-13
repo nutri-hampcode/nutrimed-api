@@ -38,7 +38,7 @@ public class GoalServiceImpl implements GoalService {
     public Goal update(Integer id, Goal goal) {
         Goal doc = goalRepository.findById(id).
                 orElseThrow(() -> new RuntimeException("Goal not found with id: " + id));
-        doc.setGoalName(goal.getGoalName());
+        doc.setName(goal.getName());
         return goalRepository.save(doc);
     }
 
