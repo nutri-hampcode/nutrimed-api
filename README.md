@@ -1,6 +1,5 @@
 # nutrimed-api
 
-
 ## Introducción
 NutriMed es una plataforma diseñada para difundir información confiable sobre nutrición y brindar planes nutricionales. Con nutrimed el usuario tendrá acceso a buenos hábitos alimenticios mediante la creación de su cuenta, inicio de sesión, citas con uno o varios nutricionistas y pagos mensuales de suscripción.
 
