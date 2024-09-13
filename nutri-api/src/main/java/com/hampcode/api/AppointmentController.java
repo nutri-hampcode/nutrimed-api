@@ -14,7 +14,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/appointments")
 public class AppointmentController {
-    /*
     private final AppointmentService appointmentService;
 
     @GetMapping
@@ -45,6 +44,6 @@ public class AppointmentController {
     public ResponseEntity<Appointment> delete(@PathVariable Integer id){
         appointmentService.delete(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }*/
+    }
 
 }

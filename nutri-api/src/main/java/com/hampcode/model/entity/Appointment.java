@@ -14,15 +14,14 @@ public class Appointment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OnetoOne
+    @OneToOne
     @JoinColumn(name = "id_history", referencedColumnName = "id"
             ,foreignKey = @ForeignKey(name = "FK_id_history"))
     private History history;
 
-    @OnetoOne
+    @OneToOne
     @JoinColumn(name = "id_availability", referencedColumnName = "id"
             ,foreignKey = @ForeignKey(name = "FK_id_date"))
     private Availability id_availability;
 
 }
-

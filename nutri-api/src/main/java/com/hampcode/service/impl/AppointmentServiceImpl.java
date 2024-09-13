@@ -12,7 +12,6 @@ import java.util.List;
 @RequiredArgsConstructor
 @Service
 public class AppointmentServiceImpl implements AppointmentService {
-    /*
     private final AppointmentRepository appointmentRepository;
 
     @Transactional(readOnly = true)
@@ -47,5 +46,5 @@ public class AppointmentServiceImpl implements AppointmentService {
     @Override
     public void delete(Integer id) {
         appointmentRepository.deleteById(id);
-    }*/
+    }
 }
