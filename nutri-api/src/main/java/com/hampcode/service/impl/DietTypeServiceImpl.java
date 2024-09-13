@@ -38,8 +38,8 @@ public class DietTypeServiceImpl implements DietTypeService {
     public DietType update(Integer id, DietType dietType) {
         DietType dt = dietTypeRepository.findById(id).
                 orElseThrow(() -> new RuntimeException("Diet Type not found with id: " + id));
-        dt.setType(dt.getType());
-        dt.setDescription(dt.getDescription());
+        dt.setType(dietType.getType());
+        dt.setDescription(dietType.getDescription());
         return dietTypeRepository.save(dt);
     }
 

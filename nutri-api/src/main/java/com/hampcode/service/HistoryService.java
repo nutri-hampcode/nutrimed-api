@@ -7,4 +7,5 @@ import java.util.List;
 public interface HistoryService {
     List<History> findAll();
     History getOne(Integer id);
+    History save(Integer id_user);
 }

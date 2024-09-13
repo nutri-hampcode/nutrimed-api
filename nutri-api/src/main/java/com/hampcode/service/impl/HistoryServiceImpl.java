@@ -26,4 +26,10 @@ public class HistoryServiceImpl implements HistoryService {
         return historyRepository.findById(id).
                 orElseThrow(() -> new RuntimeException("History not found with id: " + id));
     }
+
+    @Transactional
+    @Override
+    public History save(Integer id){
+        return historyRepository.save(getOne(id));
+    }
 }

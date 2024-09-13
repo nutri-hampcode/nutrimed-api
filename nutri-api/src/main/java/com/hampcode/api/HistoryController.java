@@ -27,4 +27,9 @@ public class HistoryController {
         return new ResponseEntity<>(history, HttpStatus.OK);
     }
 
+    @PostMapping("/id_user")
+    public ResponseEntity<History> create(@PathVariable Integer idUser) {
+        History newHistory = historyService.save(idUser);
+        return ResponseEntity.ok(newHistory);
+    }
 }
