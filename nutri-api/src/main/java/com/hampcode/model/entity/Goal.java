@@ -1,7 +1,10 @@
-package com.hampcode.model.entity;
+package com.ayrtonto.nutriapi.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.List;
+
 
 @Data
 @Entity
@@ -9,10 +12,11 @@ import lombok.Data;
 public class Goal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
 
-    @Column(name="goal_name", nullable = false)
-    private String goalName;
+    @Column(name = "name", nullable = false, columnDefinition = "TEXT")
+    private String name;
 
+    @OneToMany(mappedBy = "goal")
+    private List<PlanExercise> planExercises;
 }
-
