@@ -1,5 +1,5 @@
 # nutrimed-api
-<<<<<<< ejercicios
+
 =======
 
 ## Introducción
@@ -21,4 +21,3 @@ El propósito de NutriMed es convertirse en la plataforma líder en la promoció
 ## Diagrama de base de datos
 <img width="1008" alt="Captura de pantalla 2024-09-12 a la(s) 3 52 03 p  m" src="https://github.com/user-attachments/assets/44c1ed3e-13dc-424a-819a-2c81b382d31e">
 
->>>>>>> main
