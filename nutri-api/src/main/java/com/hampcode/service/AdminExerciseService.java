@@ -1,6 +1,6 @@
-package com.ayrtonto.nutriapi.service;
+package com.hampcode.service;
 
-import com.ayrtonto.nutriapi.model.entity.Exercise;
+import com.hampcode.model.entity.Exercise;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

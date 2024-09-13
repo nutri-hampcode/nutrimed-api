@@ -1,7 +1,7 @@
-package com.ayrtonto.nutriapi.api;
+package com.hampcode.api;
 
-import com.ayrtonto.nutriapi.model.entity.Exercise;
-import com.ayrtonto.nutriapi.service.AdminExerciseService;
+import com.hampcode.model.entity.Exercise;
+import com.hampcode.service.AdminExerciseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
