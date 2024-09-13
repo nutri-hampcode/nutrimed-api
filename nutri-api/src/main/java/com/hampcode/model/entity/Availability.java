@@ -23,10 +23,9 @@ public class Availability {
     @Column(name= "time" , nullable= false)
     private LocalTime time;
 
-    @OnetoOne
+    @OneToOne
     @JoinColumn(name = "id_doctor", referencedColumnName = "id"
             ,foreignKey = @ForeignKey(name = "FK_id_doctor"))
     private Doctor doctor;
-
 }
 

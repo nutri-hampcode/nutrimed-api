@@ -17,6 +17,7 @@ public class Appointment {
     @Column(name="activate", nullable = false)
     private Boolean activate_appointment;
 
+    /*
     @OnetoOne
     @JoinColumn(name = "id_doctor", referencedColumnName = "id"
             ,foreignKey = @ForeignKey(name = "FK_id_doctor"))
@@ -35,7 +36,7 @@ public class Appointment {
     @OnetoOne
     @JoinColumn(name = "id_time", referencedColumnName = "id"
             ,foreignKey = @ForeignKey(name = "FK_id_time"))
-    private Availability id_time;
+    private Availability id_time;*/
 
 }
 

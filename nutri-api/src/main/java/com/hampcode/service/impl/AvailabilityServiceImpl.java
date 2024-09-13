@@ -46,7 +46,7 @@ public class AvailabilityServiceImpl implements AvailabilityService {
                 .orElseThrow(()->new RuntimeException("Availability not found with id: " + id));
         aux.setTime(availability.getTime());
         aux.setDate(availability.getDate());
-        aux.setReserved(availability.isReserved());
+        aux.setReserved(availability.getReserved());
         return availabilityRepository.save(aux);
     }
 

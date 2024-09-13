@@ -36,12 +36,12 @@ public class User {
     @Column(name="allergies", nullable = true)
     private String allergies;
 
-    @OnetoOne
+    @OneToOne
     @JoinColumn(name = "id_goal", referencedColumnName = "id"
             ,foreignKey = @ForeignKey(name = "FK_id_goal"))
     private Goal goal;
 
-    @OnetoOne
+    @OneToOne
     @JoinColumn(name = "id_diet_type", referencedColumnName = "id"
             ,foreignKey = @ForeignKey(name = "FK_id_diet_type"))
     private DietType dietType;

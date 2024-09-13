@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean checkCredentials(String username, String password) {
-        User user = findByUsername(username);
+        User user = userRepository.findByUsername(username);
         return passwordEncoder.matches(password, user.getPassword());
     }
 }
