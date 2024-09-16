@@ -9,15 +9,20 @@ import java.util.List;
 
 @Service
 public class MealServiceImpl implements MealService {
-
     @Autowired
     private MealRepository mealRepository;
-
     @Override
     public List<Meal> findAllMeals() {
         return mealRepository.findAll();
     }
-
+    @Override
+    public Meal saveMeal(Meal meal) {
+        return mealRepository.save(meal);
+    }
+    @Override
+    public void deleteMeal(Integer id) {
+        mealRepository.deleteById(id);
+    }
     @Override
     public Meal findMealById(Integer id) {
         return mealRepository.findById(id).orElseThrow(() -> new RuntimeException("Meal not found"));
