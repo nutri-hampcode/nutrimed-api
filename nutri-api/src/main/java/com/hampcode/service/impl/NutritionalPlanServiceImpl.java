@@ -12,12 +12,18 @@ public class NutritionalPlanServiceImpl implements NutritionalPlanService {
 
     @Autowired
     private NutritionalPlanRepository nutritionalPlanRepository;
-
     @Override
     public List<NutritionalPlan> findAllNutritionalPlans() {
         return nutritionalPlanRepository.findAll();
     }
-
+    @Override
+    public NutritionalPlan saveNutritionalPlan(NutritionalPlan nutritionalPlan) {
+        return nutritionalPlanRepository.save(nutritionalPlan);
+    }
+    @Override
+    public void deleteNutritionalPlan(Integer id) {
+        nutritionalPlanRepository.deleteById(id);
+    }
     @Override
     public NutritionalPlan findNutritionalPlanById(Integer id) {
         return nutritionalPlanRepository.findById(id).orElseThrow(() -> new RuntimeException("Nutritional plan not found"));
