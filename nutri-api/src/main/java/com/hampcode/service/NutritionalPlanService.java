@@ -1,23 +1,9 @@
 package com.hampcode.service;
 
 import com.hampcode.model.entity.NutritionalPlan;
-import com.hampcode.repository.NutritionalPlanRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 
-@Service
-public class NutritionalPlanService {
-
-    @Autowired
-    private NutritionalPlanRepository nutritionalPlanRepository;
-
-    public List<NutritionalPlan> findAllNutritionalPlans() {
-        return nutritionalPlanRepository.findAll();
-    }
-
-    public NutritionalPlan findNutritionalPlanById(Integer id) {
-        return nutritionalPlanRepository.findById(id).orElseThrow(() -> new RuntimeException("Nutritional plan not found"));
-    }
+public interface NutritionalPlanService {
+    List<NutritionalPlan> findAllNutritionalPlans();
+    NutritionalPlan findNutritionalPlanById(Integer id);
 }
