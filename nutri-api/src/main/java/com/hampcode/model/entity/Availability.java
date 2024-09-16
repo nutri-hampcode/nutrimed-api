@@ -8,7 +8,9 @@ import java.time.LocalTime;
 
 @Data
 @Entity
-@Table(name = "availability")
+@Table(name = "availability", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"date", "time", "id_doctor"})
+})
 public class Availability {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +25,7 @@ public class Availability {
     @Column(name= "time" , nullable= false)
     private LocalTime time;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "id_doctor", referencedColumnName = "id"
             ,foreignKey = @ForeignKey(name = "FK_id_doctor"))
     private Doctor doctor;
