@@ -43,7 +43,6 @@ public class MealController {
         if (existingMeal == null) {
             return ResponseEntity.notFound().build();
         }
-        // Supone que existen métodos setters para actualizar los campos deseados
         existingMeal.setName(mealDetails.getName());
         existingMeal.setDescription(mealDetails.getDescription());
         existingMeal.setProteins(mealDetails.getProteins());
