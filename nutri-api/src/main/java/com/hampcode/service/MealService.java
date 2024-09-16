@@ -6,4 +6,6 @@ import java.util.List;
 public interface MealService {
     List<Meal> findAllMeals();
     Meal findMealById(Integer id);
+    Meal saveMeal(Meal meal);
+    void deleteMeal(Integer id);
 }
